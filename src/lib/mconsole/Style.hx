@@ -10,7 +10,8 @@ package mconsole;
 #if (sys || nodejs)
 class Style
 {
-	static var clicolor = #if (nodejs && !sys) untyped __js__("process.env.CLICOLOR") #else Sys.getEnv("CLICOLOR") #end == "1";
+	// TODO Krisz: Now this is a hack, we should to fix it later
+	static var clicolor = true;//#if (nodejs && !sys) untyped __js__("process.env.CLICOLOR") #else Sys.getEnv("CLICOLOR") #end == "1";
 
 	static function style(string:String, start:Int, stop:Int):String
 	{
